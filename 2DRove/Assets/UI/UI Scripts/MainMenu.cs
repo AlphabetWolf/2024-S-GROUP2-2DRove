@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     
     public void StartGame(){
         SceneManager.LoadScene("Underworld");
+        FindObjectOfType<AudioManager>().Stop("Main Menu");
+        FindObjectOfType<AudioManager>().Play("Floor1 Music");
     }
 
     public void ExitGame(){
