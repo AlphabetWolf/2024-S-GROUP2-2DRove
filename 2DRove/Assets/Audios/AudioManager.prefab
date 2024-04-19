@@ -62,14 +62,21 @@ MonoBehaviour:
   - name: Player Attack
     clip: {fileID: 8300000, guid: 926001a1b5ec44dbcbba779872c62a55, type: 3}
     volume: 0.6
-    pitch: 1
+    pitch: 0.9
     loop: 0
     audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
     source: {fileID: 0}
   - name: Player Move(Slash3)
-    clip: {fileID: 8300000, guid: 7da29094a5fd04d0883e3539545ee2b8, type: 3}
-    volume: 0.4
-    pitch: 1.2
+    clip: {fileID: 8300000, guid: 0d04a23dd68ba482e9e61beeb7e49d6e, type: 3}
+    volume: 0.5
+    pitch: 0.8
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Player Attack(Slash3)
+    clip: {fileID: 8300000, guid: fdfd06f8dcdc141d0a5019ffb7547160, type: 3}
+    volume: 0.1
+    pitch: 1
     loop: 0
     audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
     source: {fileID: 0}

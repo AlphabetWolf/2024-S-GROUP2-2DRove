@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Main Menu");
+        // Play("Main Menu");
     }
 
     public void Play(string name)
