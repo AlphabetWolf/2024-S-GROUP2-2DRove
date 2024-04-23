@@ -16,6 +16,7 @@ public class GuadianSpecialState : GuardianBaseState
         xPos = Guardian.GetComponent<Transform>().position.x;
         yPos = Guardian.GetComponent<Transform>().position.y;
         Debug.Log("Entering Dash State");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Guardian Special");
         specialTime = specialDuration;
         animator = Guardian.GetComponent<Animator>();
         animator.SetTrigger("special");
@@ -48,7 +49,6 @@ public class GuadianSpecialState : GuardianBaseState
     {
         LayerMask mask = LayerMask.GetMask("Player");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(Guardian.attack1X.position, 8, mask);
-
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Player"))

@@ -22,6 +22,7 @@ public class WidowAttackState : WidowBaseState
         {
             case 0:
                 animator.SetBool("isJumping", true);
+                
                 Debug.Log("Jumping");
                 break;
             case 1:
@@ -73,18 +74,21 @@ public class WidowAttackState : WidowBaseState
                 PlayerController playerScript = collider.GetComponent<PlayerController>();
                 if (returnAttackType == 1) //spitting attack
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("Widow Spit");
                     playerScript.dealDamage(15);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 25, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");
                 }
                 else if (returnAttackType == 0) //jumping
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("Widow Jump");
                     playerScript.dealDamage(10);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 40, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");
                 }
                 else if (returnAttackType == 2) //melee
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("Widow Attack");
                     playerScript.dealDamage(10);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 5, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");

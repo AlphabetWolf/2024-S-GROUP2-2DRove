@@ -17,9 +17,11 @@ public class GuardianVertDashState : GuardianBaseState
         xPos = Guardian.GetComponent<Transform>().position.x;
         yPos = Guardian.GetComponent<Transform>().position.y;
         Debug.Log("Entering Dash State");
+        
         dashTime = dashDuration;
         animator = Guardian.GetComponent<Animator>();
         animator.SetTrigger("vertDash");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Guardian Move");
         Guardian.GetComponent<PolygonCollider2D>().enabled = true;
         Guardian.afterImage.makeGhost = true;
     }
@@ -49,6 +51,8 @@ public class GuardianVertDashState : GuardianBaseState
     //done in animation events
     public override void EventTrigger(GuardianStateManager Guardian, int attackID)
     {
+        
+
     }
 
     public override void TakeDamage(GuardianStateManager Guardian)

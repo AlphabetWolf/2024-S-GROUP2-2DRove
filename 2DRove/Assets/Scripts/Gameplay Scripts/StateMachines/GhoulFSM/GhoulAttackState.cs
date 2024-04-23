@@ -39,7 +39,7 @@ public class GhoulAttackState : GhoulBaseState
         Vector2 knockbackDirection = (Vector2)(ghoul.transform.position - ghoul.attackPoint.position).normalized;
         LayerMask mask = LayerMask.GetMask("Player");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(ghoul.attackPoint.position, ghoul.attackRange, mask);
-
+        AudioManager.FindObjectOfType<AudioManager>().Play("Ghoul Attack");
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Player"))

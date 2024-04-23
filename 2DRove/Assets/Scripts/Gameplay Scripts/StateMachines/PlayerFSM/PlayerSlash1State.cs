@@ -20,10 +20,12 @@ public class PlayerSlash1State : PlayerBaseState
         combo = false;
         Player.Coroutine(DashDelay(Player));
         Player.animator.SetTrigger("slash1");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Player Attack1");
         burning = Player.GetComponent<PlayerController>().doesBurn();
         burnDamage = Player.GetComponent<PlayerController>().getBurnDamage();
         damageBoost = Player.GetComponent<PlayerController>().getDamageBoost();
         critRate = Player.GetComponent<PlayerController>().getCritRate();
+        
     }
 
     public override void UpdateState(PlayerStateManager Player)

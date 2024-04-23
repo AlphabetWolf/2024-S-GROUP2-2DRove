@@ -7,6 +7,8 @@ public class ElkIdleState : ElkBaseState
     public override void EnterState(ElkStateManager elk)
     {
         Debug.Log("Entering Idle State...");
+        AudioManager.FindObjectOfType<AudioManager>().Stop("Eat Grass");
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
         elk.animator.SetFloat("velocity", 0); 
     }

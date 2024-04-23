@@ -141,6 +141,7 @@ public class SpitterAttackState : SpitterBaseState
     //done in animation events
     public override void EventTrigger(SpitterStateManager spitter)
     {
+        AudioManager.FindObjectOfType<AudioManager>().Play("Spitter Attack");
         FireProjectile();
     }
 

@@ -11,6 +11,7 @@ public class ElkEatState : ElkBaseState
     public override void EnterState(ElkStateManager elk)
     {
         Debug.Log("Entering Eat State...");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Eat Grass");
         animator = elk.GetComponent<Animator>();
         if (animator != null)
         {
@@ -62,6 +63,7 @@ public class ElkEatState : ElkBaseState
 
     public override void TakeDamage(ElkStateManager elk)
     {
+        AudioManager.FindObjectOfType<AudioManager>().Stop("Eat Grass");
        // elk.SwitchState(elk.HitState); // change to check health
         float health = elk.GetComponent<NewEnemy>().CurrentHeath();
         Debug.Log("HP: " + health);

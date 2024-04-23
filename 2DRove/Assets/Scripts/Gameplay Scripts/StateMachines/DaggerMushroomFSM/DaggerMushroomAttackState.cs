@@ -39,6 +39,7 @@ public class DaggerMushroomAttackState : DaggerMushroomBaseState
         Vector2 knockbackDirection = (Vector2)(mush.transform.position - mush.attackPoint.position).normalized;
         LayerMask mask = LayerMask.GetMask("Player");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(mush.attackPoint.position, mush.attackRange, mask);
+        AudioManager.FindObjectOfType<AudioManager>().Play("DaggerMushroom Attack");
 
         foreach (Collider2D collider in colliders)
         {

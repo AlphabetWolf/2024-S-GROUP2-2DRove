@@ -49,6 +49,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f400d5734e775450494948376c9918eb, type: 3}
     volume: 1
     pitch: 0.8
+    spatialBlend: 0
     loop: 1
     audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
     source: {fileID: 0}
@@ -56,27 +57,175 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 78171b3ee43cb4012bd33925377611fa, type: 3}
     volume: 0.2
     pitch: 1
+    spatialBlend: 0
     loop: 1
     audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
     source: {fileID: 0}
-  - name: Player Attack
-    clip: {fileID: 8300000, guid: 926001a1b5ec44dbcbba779872c62a55, type: 3}
-    volume: 0.6
-    pitch: 0.9
-    loop: 0
-    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
-    source: {fileID: 0}
-  - name: Player Move(Slash3)
-    clip: {fileID: 8300000, guid: 0d04a23dd68ba482e9e61beeb7e49d6e, type: 3}
-    volume: 0.5
-    pitch: 0.8
-    loop: 0
-    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
-    source: {fileID: 0}
-  - name: Player Attack(Slash3)
-    clip: {fileID: 8300000, guid: fdfd06f8dcdc141d0a5019ffb7547160, type: 3}
-    volume: 0.1
+  - name: Player Attack1
+    clip: {fileID: 8300000, guid: 221fefba3304d48dfbadd60012ae98bd, type: 3}
+    volume: 0.15
     pitch: 1
+    spatialBlend: 0
     loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Player Attack2
+    clip: {fileID: 8300000, guid: aa11eeeb0bcb14148a4d4745924240e2, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Player Attack3
+    clip: {fileID: 8300000, guid: d7ba65e0fc6704718b1d82acad8e641a, type: 3}
+    volume: 0.3
+    pitch: 1.1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Archer Attack
+    clip: {fileID: 8300000, guid: c8345ef73af8b40288923f4eef429d70, type: 3}
+    volume: 0.3
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: CagedShocker Attack
+    clip: {fileID: 8300000, guid: 576a3e5cd0f574f50a894e9be6146395, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Warden Attack
+    clip: {fileID: 8300000, guid: ddcf2fdd5eef74cd38997554d9629e7b, type: 3}
+    volume: 0.35
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Warden Move
+    clip: {fileID: 8300000, guid: 0d04a23dd68ba482e9e61beeb7e49d6e, type: 3}
+    volume: 0.4
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Spitter Attack
+    clip: {fileID: 8300000, guid: 5c2e98fa23e5841209a4c056aab1bfae, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Ghoul Attack
+    clip: {fileID: 8300000, guid: db2b42f206619415c987a1a617ac52a2, type: 3}
+    volume: 0.1
+    pitch: 1.1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Guardian Move
+    clip: {fileID: 8300000, guid: 5e6bcb5c1c6444e4c8ce0ae722c860b9, type: 3}
+    volume: 0.1
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Guardian Special
+    clip: {fileID: 8300000, guid: 6f3097e7d65ed4ddf909a481757d961c, type: 3}
+    volume: 0.4
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Guardian Attack
+    clip: {fileID: 8300000, guid: 04b1eb11ba0bd4b4596eccd4395d8c72, type: 3}
+    volume: 0.15
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: DaggerMushroom Attack
+    clip: {fileID: 8300000, guid: 6fe6316815dfb4c80ace6fcc369fd3e4, type: 3}
+    volume: 0.08
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Widow Jump
+    clip: {fileID: 8300000, guid: fdef5e48718654e12ab4c08ba8fad5f8, type: 3}
+    volume: 0.306
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Widow Spit
+    clip: {fileID: 8300000, guid: d864b3fe269574417a7959f74b3a3159, type: 3}
+    volume: 0.4
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Widow Attack
+    clip: {fileID: 8300000, guid: 093b725cdf86f4585ba103c050504a22, type: 3}
+    volume: 0.35
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: RockBoss Charge
+    clip: {fileID: 8300000, guid: 8e0bd149d221b437dbaf83a6ad1f8835, type: 3}
+    volume: 0.08
+    pitch: 1.35
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: RockBoss Shoot
+    clip: {fileID: 8300000, guid: 1924d380935c44421a3058049085a8c9, type: 3}
+    volume: 0.13
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: RockBoss Slam
+    clip: {fileID: 8300000, guid: 8b47b1d74cbbe4f868c3fff6231c7d6a, type: 3}
+    volume: 0.4
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: RockBoss Beam
+    clip: {fileID: 8300000, guid: eb9df36592a9d4933a1eb26fdcc5027a, type: 3}
+    volume: 0.5
+    pitch: 1.2
+    spatialBlend: 0
+    loop: 0
+    audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
+    source: {fileID: 0}
+  - name: Eat Grass
+    clip: {fileID: 8300000, guid: b632f4cef41ad4a7fbdce3b773adf44a, type: 3}
+    volume: 0.1
+    pitch: 1.5
+    spatialBlend: 0
+    loop: 1
     audioMixer: {fileID: 24100000, guid: 361a069c76ee544c5a17eb76b535a1b6, type: 2}
     source: {fileID: 0}

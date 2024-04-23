@@ -37,10 +37,11 @@ public class ArcherAttackState : ArcherBaseState
     //done in animation events
     public override void EventTrigger(ArcherStateManager archer)
     {
+        AudioManager.FindObjectOfType<AudioManager>().Play("Archer Attack");
+
         Vector2 knockbackDirection = (Vector2)(archer.transform.position - archer.attackPoint.position).normalized;
         LayerMask mask = LayerMask.GetMask("Player");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(archer.attackPoint.position, archer.attackRange, mask);
-
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Player"))
@@ -55,6 +56,7 @@ public class ArcherAttackState : ArcherBaseState
 
     public override void TakeDamage(ArcherStateManager archer)
     {
+        AudioManager.FindObjectOfType<AudioManager>().Stop("Archer Attack");
         archer.SwitchState(archer.HitState);
     }
 }

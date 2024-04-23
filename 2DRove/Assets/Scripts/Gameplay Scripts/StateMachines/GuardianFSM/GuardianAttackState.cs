@@ -9,6 +9,7 @@ public class GuardianAttackState : GuardianBaseState
         Debug.Log("Entering Attack State");
         attackTime = .917f + .917f;
         animator = Guardian.GetComponent<Animator>();
+        AudioManager.FindObjectOfType<AudioManager>().Play("Guardian Attack");
         animator.SetBool("attacking", true);
     }
 

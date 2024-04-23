@@ -30,7 +30,7 @@ public class RockBossAttackState : RockBossBaseState
                 Debug.Log("Beaming");
                 break;
             case 1:
-                animator.SetBool("Shooting", true);
+                animator.SetBool("Shooting", true); 
                 Debug.Log("Shooting");
                 break;
             case 2:
@@ -85,24 +85,28 @@ public class RockBossAttackState : RockBossBaseState
                 PlayerController playerScript = collider.GetComponent<PlayerController>();
                 if (returnAttackType == 0) //beam attack
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("RockBoss Beam");
                     playerScript.dealDamage(15);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 25, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");
                 }
                 else if (returnAttackType == 1) //shooting attack
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("RockBoss Shoot");
                     playerScript.dealDamage(12);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 20, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");
                 }
                 else if (returnAttackType == 2) //charging
                 {
+                    AudioManager.FindObjectOfType<AudioManager>().Play("RockBoss Charge");
                     playerScript.dealDamage(10);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 40, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");
                 }
                 else if (returnAttackType == 3) //slamming
                 {
+                     AudioManager.FindObjectOfType<AudioManager>().Play("RockBoss Slam");
                     playerScript.dealDamage(10);
                     collider.GetComponent<Rigidbody2D>().AddForce(-knockbackDirection * 5, ForceMode2D.Impulse);
                     collider.GetComponent<Animator>().SetTrigger("Hit");

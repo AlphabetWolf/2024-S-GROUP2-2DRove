@@ -16,9 +16,12 @@ public class GuardianHorizontalDashState : GuardianBaseState
         xPos = Guardian.GetComponent<Transform>().position.x;
         yPos = Guardian.GetComponent<Transform>().position.y;
         Debug.Log("Entering Dash State");
+        
+
         dashTime = dashDuration;
         animator = Guardian.GetComponent<Animator>();
         animator.SetTrigger("horizontalDash");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Guardian Move");
     }
 
     public override void UpdateState(GuardianStateManager Guardian)
@@ -45,6 +48,7 @@ public class GuardianHorizontalDashState : GuardianBaseState
     //done in animation events
     public override void EventTrigger(GuardianStateManager Guardian, int attackID)
     {
+        
     }
 
     public override void TakeDamage(GuardianStateManager Guardian)

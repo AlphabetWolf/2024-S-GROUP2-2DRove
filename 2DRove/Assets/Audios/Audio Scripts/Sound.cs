@@ -14,6 +14,9 @@ public class Sound
     [Range(0.1f, 3f)]
     public float pitch;
 
+    [Range(0f, 1f)]
+    public float spatialBlend;
+
     public bool loop;
 
     public AudioMixer audioMixer; 

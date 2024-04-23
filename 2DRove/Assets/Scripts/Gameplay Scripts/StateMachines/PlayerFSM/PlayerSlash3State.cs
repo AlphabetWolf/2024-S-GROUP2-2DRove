@@ -17,6 +17,8 @@ public class PlayerSlash3State : PlayerBaseState
         combo = false;
         Player.Coroutine(DashDelay(Player));
         Player.animator.SetTrigger("slash3");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Player Attack3");
+
         damageBoost = Player.GetComponent<PlayerController>().getDamageBoost();
         critRate = Player.GetComponent<PlayerController>().getCritRate();
     }

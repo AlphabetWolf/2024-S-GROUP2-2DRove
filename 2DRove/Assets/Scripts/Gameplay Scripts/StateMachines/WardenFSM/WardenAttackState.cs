@@ -40,7 +40,9 @@ public class WardenAttackState : WardenBaseState
         // Calculate knockback direction and set y to 0 for horizontal force
         Vector2 knockbackDirection = (Vector2)(Warden.transform.position - Warden.attackPointX.position).normalized;
         knockbackDirection.y = 0; // This ensures the force is applied horizontally
-        
+        AudioManager.FindObjectOfType<AudioManager>().Play("Warden Attack");
+        AudioManager.FindObjectOfType<AudioManager>().Play("Warden Move");
+
         // Use LayerMask.GetMask incorrectly here. Should pass layer names as string array
         // Correcting to use a predefined LayerMask for the player if needed
         LayerMask mask = LayerMask.GetMask("Player");
